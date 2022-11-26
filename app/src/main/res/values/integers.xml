@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="minUsernameLength">3</integer>
+    <integer name="minPasswordLength">3</integer>
+    <integer name="maxUsernameLength">50</integer>
+    <integer name="maxPasswordLength">50</integer>
+</resources>

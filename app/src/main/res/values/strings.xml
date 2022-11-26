@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Google Font App</string>
+    <string name="endpoint">"https://www.googleapis.com/webfonts/v1/webfonts?key=%1$s"</string>
+
+    <!-- Login Activity -->
+    <string name="login_text">Authentication</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="bt_login_text">Login</string>
+    <string name="bt_register_text">Register</string>
+    <string name="register_text">Create Account</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="bt_confirm_text">Confirm</string>
+    <string name="bt_cancel_text">Cancel</string>
+    <string name="bt_reset_password">Reset Password?</string>
+    <string name="invalid_password">Invalid Password!</string>
+    <string name="username_allowed_digits">
+        "ABCDEFGHIJKLMOPQRSTUVWXYZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÒÓÔÕÖØÙÚÛÜÝabcdefghijklmnopqrstuvwxyzàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿ0123456789 "
+    </string>
+
+    <!-- Register Activity -->
+    <string name="field_too_short">%1$s must be at least %2$d characters long</string>
+    <string name="field_too_large">%1$s has a max length of %2$d characters</string>
+    <string name="field_incomplete">%1$s requires a value</string>
+    <string name="field_must_be_equal">%1$s and %2$s must match</string>
+    <string name="error_placeholder">Invalid Inputs</string>
+    <string name="bt_dismiss">Dismiss</string>
+    <string name="value_already_taken">%1$s is already taken</string>
+
+    <!-- Shared Preferences Keys -->
+    <string name="username_key">Username</string>
+    <string name="password_key">Password</string>
+
+    <!-- Google API Activity -->
+    <string name="font_filter_hint">Type something here..</string>
+    <string name="description_search_button">Search Font</string>
+    <string name="hint_font_family">Family</string>
+    <string name="hint_font_sample">Whereas recognition of the inherent dignity</string>
+    <string name="hint_font_category">Category</string>
+    <string name="default_text_sample">Hello World!</string>
+    <string name="error_dialog_title">An error occurred!</string>
+    <string name="error_json">Unable to fetch Data from Google Font</string>
+    <string name="font_unable_to_load">Unable to load font!</string>
+    <string name="wrong_certificate">Wrong Certificate!</string>
+
+    <!-- Reset Password Activity -->
+    <string name="reset_password_text">Reset Password</string>
+    <string name="hint_old_password">Old Password</string>
+    <string name="hint_new_password">New Password</string>
+    <string name="invalid_password_username">Invalid Username or Password</string>
+    <string name="login_msg_key">loginMessage</string>
+    <string name="reset_successful">Password successfully changed!</string>
+    <string name="passwords_are_same">Old and New Password should be different!</string>
+    <string name="google_font">Google Font</string>
+</resources>
