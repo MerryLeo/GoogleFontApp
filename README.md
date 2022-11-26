@@ -1,11 +1,11 @@
 # Google Font Application
-<img align="right" src="assets/GoogleFontAppPreview.gif" width="25%" alt="Application Preview">
+<img align="right" src="assets/GoogleFontAppPreview.gif" width="30%" alt="Application Preview">
 
 An Android native application for viewing different fonts available from the 
-[Google Font Developer API](https://developers.google.com/fonts/docs/developer_api). </br>
+[Google Font Developer API](https://developers.google.com/fonts/docs/developer_api).
 Each font is displayed in a ViewHolder with its name, its family, and a sample which is downloaded asynchronously using a Font Provider. </br> 
 
-This application features a login screen, register screen, reset password screen, and a font screen (main screen).
+This application features a login screen, register screen, reset password screen, and font screen (main screen).
 But, username and password are only saved on the phone using Shared Preferences, which is considered **unsafe**.
 
 This project was created during one of my courses on Android mobile development for an assignment.
