@@ -4,4 +4,5 @@
     <integer name="minPasswordLength">3</integer>
     <integer name="maxUsernameLength">50</integer>
     <integer name="maxPasswordLength">50</integer>
+    <integer name="maxSampleTextLength">45</integer>
 </resources>

@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.googlefontapp.databinding.ActivityGoogleFontBinding
@@ -30,12 +31,25 @@ class GoogleFontActivity : AppCompatActivity() {
 
                 // Bind FontData Adapter
                 val fontAdapter = FontAdapter(fonts, this@GoogleFontActivity)
+
+                // Update Sample Text with User Input
+                binding.inputSampleText.doAfterTextChanged { inputText ->
+                    fontAdapter.apply {
+                        this.sampleText = inputText.toString()
+                        this.activeFontSamples.forEach {
+                            it.text = inputText.toString()
+                        }
+                    }
+                    // for (child in binding.rvGoogleFont.children) {
+                    //     child.findViewById<TextView>(R.id.tvFontSample).text = it.toString()
+                    //}
+                }
+
                 this@GoogleFontActivity.runOnUiThread {
                     binding.rvGoogleFont.adapter = fontAdapter
                     binding.rvGoogleFont.layoutManager =
                         LinearLayoutManager(this@GoogleFontActivity)
                 }
-
             } catch (e: Exception) {
                 // Disable RecyclerView and display an AlertDialog
                 this@GoogleFontActivity.runOnUiThread {

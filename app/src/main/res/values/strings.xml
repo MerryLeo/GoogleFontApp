@@ -37,11 +37,11 @@
     <string name="hint_font_family">Family</string>
     <string name="hint_font_sample">Whereas recognition of the inherent dignity</string>
     <string name="hint_font_category">Category</string>
-    <string name="default_text_sample">Hello World!</string>
     <string name="error_dialog_title">An error occurred!</string>
     <string name="error_json">Unable to fetch Data from Google Font</string>
     <string name="font_unable_to_load">Unable to load font!</string>
     <string name="wrong_certificate">Wrong Certificate!</string>
+    <string name="hint_write_something">Write something..</string>
 
     <!-- Reset Password Activity -->
     <string name="reset_password_text">Reset Password</string>

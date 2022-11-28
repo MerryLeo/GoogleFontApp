@@ -14,6 +14,9 @@ class FontAdapter(private val fonts: List<FontData>, private val parent: AppComp
 
     inner class FontViewHolder(fontView: View) : RecyclerView.ViewHolder(fontView)
 
+    var sampleText = String()
+    val activeFontSamples = mutableListOf<TextView>()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FontViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.font_row_item, parent, false)
@@ -29,13 +32,25 @@ class FontAdapter(private val fonts: List<FontData>, private val parent: AppComp
                 R.array.com_google_android_gms_fonts_certs_dev
             )
 
-            val handler = android.os.Handler(Looper.getMainLooper())
-
-            val callback = FontContract(findViewById(R.id.tvFontSample), this@FontAdapter.parent)
-            FontsContractCompat.requestFont(this@FontAdapter.parent, request, callback, handler)
+            // Request Font
+            findViewById<TextView>(R.id.tvFontSample).apply {
+                val handler = android.os.Handler(Looper.getMainLooper())
+                val callback = FontContract(this, this@FontAdapter.parent)
+                FontsContractCompat.requestFont(this@FontAdapter.parent, request, callback, handler)
+                this.text = sampleText
+                activeFontSamples.add(this)
+            }
 
             findViewById<TextView>(R.id.tvFontFamily).text = fonts[position].family
             findViewById<TextView>(R.id.tvFontCategory).text = fonts[position].category
+        }
+    }
+
+    override fun onViewRecycled(holder: FontViewHolder) {
+        super.onViewRecycled(holder)
+
+        holder.itemView.apply {
+            activeFontSamples.remove(findViewById(R.id.tvFontSample))
         }
     }
 
